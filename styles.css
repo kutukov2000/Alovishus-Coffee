@@ -1,0 +1,550 @@
+@font-face {
+  font-family: Jost;
+  src: url(/fonts/Jost.ttf);
+}
+body {
+  font-family: Jost;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #1B1B1D;
+}
+
+h2 {
+  color: #1B1B1D;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 70px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.circle-button {
+  border: none;
+  border-radius: 100px;
+  height: 60px;
+  width: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  background-color: #EEEFF1;
+}
+header > img {
+  width: 126px;
+  height: 50px;
+}
+header ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  padding: 0;
+  color: #1B1B1D;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+header div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header div button:last-child {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 15px 30px;
+  width: fit-content;
+}
+
+.banner {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #EEEFF1;
+  padding-top: 123px;
+}
+.banner div:first-child img {
+  position: relative;
+  top: -58px;
+  left: 423px;
+}
+.banner div:first-child h1 {
+  color: #1B1B1D;
+  font-size: 124px;
+  font-weight: 800;
+  line-height: 140px;
+  margin-bottom: -28px;
+}
+.banner div:first-child p {
+  color: #64646A;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.banner div:first-child .buttons-div {
+  display: flex;
+  gap: 30px;
+}
+.banner div:first-child .buttons-div button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 20px 40px;
+  width: fit-content;
+}
+.banner div:first-child .buttons-div a {
+  color: #1B1B1D;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+.banner .feedback-card {
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: -310px;
+  width: 280px;
+  height: 140px;
+  padding: 20px 24px;
+}
+.banner .feedback-card .stars {
+  display: flex;
+  gap: 0;
+  margin-bottom: 12px;
+}
+.banner .feedback-card p {
+  color: #64646A;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+}
+
+.explore-our-alowishus-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(/images/bg-cup-of-coffee.png);
+  background-repeat: no-repeat;
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+}
+.explore-our-alowishus-div h2 {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 24px;
+}
+.explore-our-alowishus-div > p {
+  color: #64646A;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 90px;
+}
+.explore-our-alowishus-div .cards-div {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.explore-our-alowishus-div .cards-div .card-div {
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 40px;
+  width: 326px;
+  height: 444px;
+  box-shadow: 0px 30px 60px 0px rgba(163, 168, 178, 0.15);
+}
+.explore-our-alowishus-div .cards-div .card-div p {
+  color: #64646A;
+  font-size: 24px;
+  margin: 0;
+}
+.explore-our-alowishus-div .cards-div .card-div .card-title {
+  color: #1B1B1D;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.explore-our-alowishus-div .cards-div .card-div button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 15px 30px;
+  width: fit-content;
+}
+
+.order-your-favourite-coffee {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 190px;
+}
+.order-your-favourite-coffee p {
+  color: #64646A;
+  font-size: 24px;
+}
+.order-your-favourite-coffee button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 20px 40px;
+  width: fit-content;
+}
+
+.best-selling-coffee {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  padding-top: 170px;
+}
+.best-selling-coffee h2 {
+  text-align: center;
+  margin: 0;
+}
+.best-selling-coffee p {
+  color: #64646A;
+  font-size: 24px;
+  text-align: center;
+}
+.best-selling-coffee .cards-div {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 175px;
+}
+.best-selling-coffee .card-div {
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+  height: 444px;
+  box-shadow: 0px 20px 60px 0px rgba(163, 168, 178, 0.15);
+  padding: 30px;
+  justify-content: space-between;
+}
+.best-selling-coffee .card-div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.best-selling-coffee .card-div > div:first-child {
+  margin-bottom: -100px;
+}
+.best-selling-coffee .card-div img {
+  position: relative;
+  top: -100px;
+}
+.best-selling-coffee .card-div p {
+  color: #64646A;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  margin: 0;
+}
+.best-selling-coffee .card-div button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 15px 30px;
+  width: fit-content;
+}
+.best-selling-coffee .card-div .price {
+  color: #1B1B1D;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.best-selling-coffee .card-div .card-title {
+  color: #1B1B1D;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-top: 8px;
+}
+.best-selling-coffee .card-div .card-footer {
+  align-items: center;
+}
+
+.instant-coffee-at-your-home {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  background-image: url(/images/bg-cup-of-coffee-3.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 120px;
+}
+.instant-coffee-at-your-home > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instant-coffee-at-your-home p {
+  color: #64646A;
+  font-size: 24px;
+}
+.instant-coffee-at-your-home button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 20px 40px;
+  width: fit-content;
+}
+
+.what-our-customers-say {
+  display: flex;
+  background: url(/images/bg-cup-of-coffee-4.png);
+  background-repeat: no-repeat;
+  background-position: 100% -100%;
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+}
+.what-our-customers-say .cards-div {
+  display: flex;
+  gap: 35px;
+  position: relative;
+  left: -12%;
+  overflow: hidden;
+}
+.what-our-customers-say .cards-div .card-div {
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 20px 60px 0px rgba(163, 168, 178, 0.15);
+}
+.what-our-customers-say .cards-div .card-div .card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+.what-our-customers-say .cards-div .card-div .card-content {
+  padding: 40px;
+  padding-top: 0;
+}
+.what-our-customers-say .cards-div .card-div .card-content p {
+  margin: 0;
+  color: #1B1B1D;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.what-our-customers-say .cards-div .card-div .name {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 30px 0;
+}
+.what-our-customers-say .cards-div .card-div .name p {
+  color: #1B1B1D;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.what-our-customers-say .rating {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.what-our-customers-say .rating p {
+  color: #1B1B1D;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.what-our-customers-say .rating > div > p {
+  color: #64646A;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0;
+}
+.what-our-customers-say .buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 100px;
+}
+
+.contacts {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #F3F4F5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 210px;
+  padding-bottom: 70px;
+}
+.contacts img {
+  width: 307px;
+  height: 122px;
+  margin-bottom: 40px;
+}
+.contacts .contacts-text {
+  margin-bottom: 108px;
+}
+.contacts p {
+  color: #64646A;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0;
+}
+.contacts .title {
+  color: #1B1B1D;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+}
+.contacts .store-locations {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.contacts .store-locations a {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.contacts .store-locations a p {
+  color: #1B1B1D;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.contacts .contact-alowishus {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  padding-left: 210px;
+}
+.contacts .contact-alowishus div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.contacts .contact-alowishus .buttons {
+  margin-bottom: 60px;
+}
+.contacts .contact-alowishus input {
+  width: 413px;
+  height: 70px;
+  border-radius: 65px;
+  background-color: #fff;
+  box-shadow: 0px 12px 30px 0px rgba(205, 209, 214, 0.28);
+  border: none;
+}
+.contacts .contact-alowishus input::placeholder {
+  color: #64646A;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  opacity: 0.7;
+  padding-left: 25px;
+}
+.contacts .contact-alowishus > button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #1B1B1D;
+  padding: 20px 40px;
+  width: fit-content;
+}
+
+footer {
+  width: 1440px;
+  padding: 0 100px;
+  background-color: #EEEFF1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer a,
+footer p {
+  color: #64646A;
+  font-size: 22px;
+  line-height: 30px;
+}
+footer span {
+  color: #1B1B1D;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

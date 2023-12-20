@@ -1,0 +1,546 @@
+$primary: #1B1B1D;
+$secondary: #64646A;
+$bg-1: #EEEFF1;
+$bg-2: #F3F4F5;
+$bg-3: #fff;
+
+@font-face {
+    font-family: Jost;
+    src: url(/fonts/Jost.ttf);
+}
+
+body {
+    font-family: Jost;
+
+    width: 100vw;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin button($padding-left-right: 15px, $padding-top-bottom: 30px) {
+    @include text-settings($bg-3, 18px, 500, 30px);
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: $primary;
+
+    padding: $padding-left-right $padding-top-bottom;
+
+    width: fit-content;
+}
+
+@mixin card($border-radius: 24px) {
+    background-color: $bg-3;
+    border-radius: $border-radius;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text-settings($color, $size, $weight, $height) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin paragraph($font-size: 19px) {
+    color: $secondary;
+    font-size: $font-size;
+}
+
+@mixin container($bg-color: $bg-2) {
+    width: 1440px;
+    padding: 0 100px;
+
+    background-color: $bg-color;
+}
+
+@mixin display-grid() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin flex-gap($gap: 0) {
+    display: flex;
+    gap: $gap;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+}
+
+h2 {
+    @include text-settings($primary, 64px, 800, 70px);
+}
+
+button {
+    cursor: pointer;
+}
+
+.circle-button {
+    border: none;
+    border-radius: 100px;
+
+    height: 60px;
+    width: 60px;
+
+    background-color: $bg-3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 24px;
+    background-color: $bg-1;
+
+    >img {
+        width: 126px;
+        height: 50px;
+    }
+
+    ul {
+        @include flex-gap(40px);
+
+        list-style-type: none;
+        padding: 0;
+
+        @include text-settings($primary, 20px, 500, 26px);
+    }
+
+    div {
+        @include flex-gap(20px);
+        align-items: center;
+
+        button:last-child {
+            @include button();
+        }
+    }
+}
+
+.banner {
+    @include container();
+    @include display-grid();
+
+    background-color: $bg-1;
+
+    padding-top: 123px;
+
+    div:first-child {
+
+        img {
+            position: relative;
+            top: -58px;
+            left: 423px;
+        }
+
+        h1 {
+            @include text-settings($primary, 124px, 800, 140px);
+            margin-bottom: -28px;
+        }
+
+        p {
+            @include paragraph(24px);
+
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+
+        .buttons-div {
+            @include flex-gap(30px);
+
+            button {
+                @include button(20px, 40px);
+            }
+
+            a {
+                @include text-settings($primary, 18px, 500, 26px);
+                text-transform: uppercase;
+                text-decoration: underline;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .feedback-card {
+        @include card();
+
+        justify-content: center;
+
+        position: relative;
+        top: -310px;
+
+        width: 280px;
+        height: 140px;
+
+        padding: 20px 24px;
+
+        .stars {
+            @include flex-gap();
+
+            margin-bottom: 12px;
+        }
+
+        p {
+            @include text-settings($secondary, 19px, 400, 26px);
+
+            margin: 0;
+        }
+    }
+}
+
+.explore-our-alowishus-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url(/images/bg-cup-of-coffee.png);
+    background-repeat: no-repeat;
+
+    @include container();
+
+    h2 {
+        text-align: center;
+
+        margin-top: 150px;
+        margin-bottom: 24px;
+    }
+
+    >p {
+        @include paragraph(24px);
+
+        text-align: center;
+
+        margin-top: 0;
+        margin-bottom: 90px;
+    }
+
+    .cards-div {
+        @include flex-gap(30px);
+        justify-content: center;
+
+        .card-div {
+            @include card();
+            @include flex-gap(60px);
+            align-items: center;
+
+            padding: 40px;
+
+            width: 326px;
+            height: 444px;
+
+            box-shadow: 0px 30px 60px 0px rgba(163, 168, 178, 0.15);
+
+            p {
+                @include paragraph(24px);
+                margin: 0;
+            }
+
+            .card-title {
+                @include text-settings($primary, 36px, 600, 30px);
+                margin-bottom: 8px;
+            }
+
+            button {
+                @include button();
+            }
+        }
+    }
+}
+
+.order-your-favourite-coffee {
+    @include container();
+    @include display-grid();
+
+    padding-top: 190px;
+
+    p {
+        @include paragraph(24px);
+    }
+
+    button {
+        @include button(20px, 40px);
+    }
+}
+
+.best-selling-coffee {
+    @include container();
+    padding-top: 170px;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+    }
+
+    p {
+        @include paragraph(24px);
+
+        text-align: center;
+    }
+
+    .cards-div {
+        @include flex-gap(30px);
+        justify-content: center;
+
+        margin-top: 175px;
+    }
+
+    .card-div {
+        @include card();
+        width: 393px;
+        height: 444px;
+
+        box-shadow: 0px 20px 60px 0px rgba(163, 168, 178, 0.15);
+
+        padding: 30px;
+
+        justify-content: space-between;
+
+        >div {
+            @include display-grid();
+        }
+
+        >div:first-child {
+            margin-bottom: -100px;
+        }
+
+        img {
+            position: relative;
+            top: -100px;
+        }
+
+        p {
+            @include text-settings($secondary, 20px, 400, 28px);
+            text-align: left;
+
+            margin: 0
+        }
+
+        button {
+            @include button();
+        }
+
+        .price {
+            @include text-settings($primary, 30px, 500, 28px);
+        }
+
+            .card-title {
+                @include text-settings($primary, 40px, 600, 44px);
+
+                margin-top: 8px;
+            }
+
+        .card-footer {
+            align-items: center;
+        }
+    }
+}
+
+.instant-coffee-at-your-home {
+    @include container();
+    background-image: url(/images/bg-cup-of-coffee-3.png);
+    background-repeat: no-repeat;
+
+    @include display-grid();
+
+    padding-top: 120px;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        @include paragraph(24px);
+    }
+
+    button {
+        @include button(20px, 40px);
+    }
+}
+
+.what-our-customers-say {
+    display: flex;
+
+    background: url(/images/bg-cup-of-coffee-4.png);
+    background-repeat: no-repeat;
+    background-position: 100% -100%;
+
+    @include container();
+
+    .cards-div {
+        @include flex-gap(35px);
+
+        position: relative;
+        left: -12%;
+        overflow: hidden;
+
+        .card-div {
+            @include card(16px);
+            box-shadow: 0px 20px 60px 0px rgba(163, 168, 178, 0.15);
+
+            .card-image {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+
+                border-top-right-radius: 16px;
+                border-top-left-radius: 16px;
+            }
+
+            .card-content {
+                padding: 40px;
+                padding-top: 0;
+
+                p {
+                    margin: 0;
+                    @include text-settings($primary, 20px, 400, 30px);
+                }
+            }
+
+            .name {
+                @include flex-gap(16px);
+                align-items: center;
+
+                margin: 30px 0;
+
+                p {
+                    @include text-settings($primary, 24px, 600, 30px);
+                }
+            }
+        }
+    }
+
+    .rating {
+        @include flex-gap(24px);
+        align-items: center;
+
+        p {
+            @include text-settings($primary, 40px, 600, 40px);
+        }
+
+        >div>p {
+            @include text-settings($secondary, 20px, 400, 28px);
+
+            margin: 0;
+        }
+    }
+
+    .buttons {
+        @include flex-gap(16px);
+
+        margin-top: 100px;
+    }
+}
+
+.contacts {
+    @include container();
+    @include display-grid();
+
+    padding-top: 210px;
+    padding-bottom: 70px;
+
+    img {
+        width: 307px;
+        height: 122px;
+
+        margin-bottom: 40px
+    }
+
+    .contacts-text {
+        margin-bottom: 108px
+    }
+
+    p {
+        @include text-settings($secondary, 30px, 400, 40px);
+        margin: 0;
+    }
+
+    .title {
+        @include text-settings($primary, 40px, 800, 50px);
+    }
+
+    .store-locations {
+        @include flex-gap(30px);
+        flex-direction: column;
+
+        a {
+            @include flex-gap(4px);
+            align-items: center;
+
+            p {
+                @include text-settings($primary, 18px, 600, 30px);
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .contact-alowishus {
+
+        @include flex-gap(30px);
+        flex-direction: column;
+
+        padding-left: 210px;
+
+        div {
+            @include flex-gap(24px);
+            align-items: center;
+        }
+
+        .buttons {
+            margin-bottom: 60px;
+        }
+
+        input {
+            width: 413px;
+            height: 70px;
+            border-radius: 65px;
+            background-color: $bg-3;
+            box-shadow: 0px 12px 30px 0px rgba(205, 209, 214, 0.28);
+            border: none;
+        }
+
+        input::placeholder {
+            @include text-settings($secondary, 22px, 500, 30px);
+            opacity: 0.7;
+
+            padding-left: 25px;
+        }
+
+        >button {
+            @include button(20px, 40px);
+        }
+    }
+}
+
+footer {
+    @include container($bg-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a,
+    p {
+        @include paragraph(22px);
+        line-height: 30px;
+    }
+
+    span {
+        @include text-settings($primary, 22px, 500, 30px);
+    }
+}
