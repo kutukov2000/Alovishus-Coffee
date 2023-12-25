@@ -6,7 +6,7 @@ $bg-3: #fff;
 
 @font-face {
     font-family: Jost;
-    src: url(/fonts/Jost.ttf);
+    src: url(fonts/Jost.ttf);
 }
 
 body {
@@ -208,7 +208,7 @@ header {
     flex-direction: column;
     align-items: center;
 
-    background: url(/images/bg-cup-of-coffee.png);
+    background: url(images/bg-cup-of-coffee.png);
     background-repeat: no-repeat;
 
     @include container();
@@ -352,7 +352,7 @@ header {
 
 .instant-coffee-at-your-home {
     @include container();
-    background-image: url(/images/bg-cup-of-coffee-3.png);
+    background-image: url(images/bg-cup-of-coffee-3.png);
     background-repeat: no-repeat;
 
     @include display-grid();
@@ -377,7 +377,7 @@ header {
 .what-our-customers-say {
     display: flex;
 
-    background: url(/images/bg-cup-of-coffee-4.png);
+    background: url(images/bg-cup-of-coffee-4.png);
     background-repeat: no-repeat;
     background-position: 100% -100%;
 
